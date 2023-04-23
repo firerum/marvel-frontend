@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #e0e9ec;
+  --primary-radius: 3px;
+  --inline-padding: 1rem;
+  --primary-width: 67%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
