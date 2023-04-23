@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Marvel Character</h1>
+  <form (ngSubmit)="getMutantProfile()">
+    <div class="form-group">
+      <label for="query">Search</label>
+      <input
+        type="text"
+        name="query"
+        [(ngModel)]="query"
+        (ngModelChange)="printUserQuery($event)"
+        id="query"
+      />
+    </div>
+    <button type="submit">Search</button>
+  </form>
+</div>

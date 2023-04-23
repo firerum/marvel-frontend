@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+  max-width: 300px;
+  font-family: "-apple-system", system-ui, helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 67%;
+  font-size: 0.85rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid #e0e9ec;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  color: gray;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+button {
+  background-color: #fdd61c;
+  height: 0%;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 3px;
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-weight: bold;
+}
