@@ -7,10 +7,13 @@
         type="text"
         name="query"
         [(ngModel)]="query"
-        (ngModelChange)="printUserQuery($event)"
+        (ngModelChange)="searchMutant($event)"
         id="query"
       />
     </div>
     <button type="submit">Search</button>
   </form>
+  <ul role="listbox" *ngIf="displayElement">
+    <li role="listitem" *ngFor="let mutant of results" (click)="printAlert($event)">{{ mutant.name }}</li>
+  </ul>
 </div>

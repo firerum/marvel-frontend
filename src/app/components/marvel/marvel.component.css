@@ -36,6 +36,8 @@ label {
 input {
   border: 1px solid #e0e9ec;
   border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 0.5rem 1rem;
   color: gray;
 }
@@ -53,4 +55,23 @@ button {
   align-self: flex-end;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 67%;
+  border: 1px solid #e0e9ec;
+  border-top: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+ul li {
+  padding: 0.5rem 1rem;
+}
+
+ul li:hover {
+  background-color: #e0e9ec;
 }
