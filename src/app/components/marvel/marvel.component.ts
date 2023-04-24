@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
-import { Mutant } from 'src/app/interfaces/Mutant.interface';
+import { Mutant, Result } from 'src/app/interfaces/Mutant.interface';
 
 @Component({
   selector: 'app-marvel',
@@ -9,19 +9,21 @@ import { Mutant } from 'src/app/interfaces/Mutant.interface';
 })
 export class MarvelComponent {
   query: string | null;
-  results: any;
+  results: Result[];
   displayElement: boolean = false;
 
   constructor(private marvelService: MarvelService) {}
 
   // search for marvel characters when user types into the input field
   searchMutant(value: string): void {
-    if (value) {
+    if (value.length >= 2) {
       this.displayElement = true; // show autosuggestion only when user types
+      this.marvelService
+        .getMutants(value || '*')
+        .subscribe((result) => (this.results = result.data.results));
+    } else {
+      this.displayElement = false;
     }
-    this.marvelService
-      .getMutants(value || '*')
-      .subscribe((result) => (this.results = result.data.results));
   }
 
   // Print charater name using window alert
